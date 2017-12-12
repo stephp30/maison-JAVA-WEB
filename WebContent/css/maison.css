@@ -1,0 +1,70 @@
+.carousel{
+    height:410px;    
+}
+
+ .carousel-item {
+    width:400px !important;
+}
+
+#deroule1 h5, #deroule2 h5, #deroule3 h5,#deroule4 h5,#deroule5 h5{
+    display: none;
+    cursor:pointer;
+}
+
+#deroule1, #deroule2, #deroule3, #deroule4, #deroule5 {    
+    cursor:pointer;
+}
+
+
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+    
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    }
+
+    @media screen and (max-width: 767px) {
+        .parallax-container{
+                display: none;
+                }
+            }
+
+#copyright, #options, #type{
+    
+    display: block;
+    text-align:center;
+   
+}
+
+h1{
+
+    display: block;
+    text-align:center;
+}
+
+#tableau{
+	margin:auto;	
+	
+}
+
+#tableau, #entete th, #ligne td {
+ border-width:1px; 
+ border-style:solid; 
+ border-color:black;
+ width:50%;
+ }
+#entete th, #ligne td { 
+ border-width:1px;
+ border-style:solid; 
+ border-color:red;
+ width:50%;
+ }
