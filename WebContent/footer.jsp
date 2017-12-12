@@ -56,6 +56,3 @@
 	<script src="js/maison.js"></script>
 	<script src="js/carousel/pgwslideshow.js"></script>
 </footer>
-</body>
-
-</html>

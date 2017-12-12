@@ -1,6 +1,6 @@
-<jsp:directive.page contentType="text/html;charset=UTF-8" />
 
-
+<jsp:include page="meta.jsp" />
+<body>
 <jsp:include page="header.jsp" />
 
 <h1 class="amber-text text-darken-1">Louer votre maison de
@@ -29,21 +29,21 @@
 
 			<i class="material-icons large ">hotel</i> <i
 				class="material-icons tiny fleche">keyboard_arrow_down</i>
-			<h5>VÃ©ritable havre de paix situÃ© Ã  Nimes la Villa Romana est
-				une maison d'architecte lumineuse et confortable. Vous apprÃ©cierez
-				ses Ã©quipements de qualitÃ©, sa dÃ©co immaculÃ©e. Piscine, plancha sur
-				terrasse de 100mÂ² avec vue plongeante sur les Oliviers.</h5>
+			<h5>Véritable havre de paix situé à Nimes la Villa Romana est
+				une maison d'architecte lumineuse et confortable. Vous apprécierez
+				ses équipements de qualité, sa déco immaculée. Piscine, plancha sur
+				terrasse de 100m² avec vue plongeante sur les Oliviers.</h5>
 		</div>
 
 		<div class="col s12 m4 red  lighten-4 " id="deroule2">
 
 			<i class="material-icons large ">pool</i> <i
 				class="material-icons tiny fleche">keyboard_arrow_down</i>
-			<h5>Piscine privative chauffÃ©e Ã  30 degrÃ©s tout au long de
-				l'annÃ©e et le jacuzzi qui se trouvent dans un jardin de rÃªve,
-				indÃ©pendant entiÃ¨rement clos, discrÃ©tion assurÃ©e, ideal pour venir
-				s'Ã©vader ou se dÃ©tendre en famille ou entres amis en journÃ©e Ou en
-				soirÃ©e.</h5>
+			<h5>Piscine privative chauffée à 30 degrés tout au long de
+				l'année et le jacuzzi qui se trouvent dans un jardin de rêve,
+				indépendant entièrement clos, discrétion assurée, ideal pour venir
+				s'évader ou se détendre en famille ou entres amis en journée Ou en
+				soirée.</h5>
 		</div>
 
 		<div class="col s12 m4 yellow  lighten-4 " id="deroule3">
@@ -51,7 +51,7 @@
 			<i class="material-icons large ">local_parking</i> <i
 				class="material-icons tiny fleche">keyboard_arrow_down</i>
 			<h5>
-				Stationnement possible de plusieurs vÃ©hicule. <br> <br> <br>
+				Stationnement possible de plusieurs véhicule. <br> <br> <br>
 				<br> <br> <br> <br>
 			</h5>
 		</div>
@@ -62,3 +62,5 @@
 </div>
 
 <jsp:include page="footer.jsp" />
+</body>
+</html>

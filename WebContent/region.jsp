@@ -1,6 +1,6 @@
-<jsp:directive.page contentType="text/html;charset=UTF-8" />
 
-
+<jsp:include page="meta.jsp" />
+<body>
 <jsp:include page="header.jsp" />
 
 <div class="container">
@@ -23,31 +23,31 @@
 				<div class="caption left-align">
 					<h3>La Camargue</h3>
 					<h5 class="light grey-text text-lighten-3">un folklore
-						toujours prÃ©sent</h5>
+						toujours présent</h5>
 				</div></li>
 			<li><img src="img/cevennes.jpg" alt="Cevennes">
 				<div class="caption right-align">
-					<h3>Les CÃ©vennes</h3>
+					<h3>Les Cévennes</h3>
 					<h5 class="light grey-text text-lighten-3">au pied de la
 						montagne</h5>
 				</div></li>
 			<li><img src="img/nimes.jpg" alt="Nimes">
 				<div class="caption center-align">
-					<h3>La maison CarrÃ©</h3>
+					<h3>La maison Carré</h3>
 					<h5 class="light grey-text text-lighten-3">Nimes, un
 						patrimoine riche</h5>
 				</div></li>
 			<li><img src="img/nimes2.jpg" alt="Nimes2">
 				<div class="caption center-align">
-					<h3>Les ArÃªnes</h3>
-					<h5 class="light grey-text text-lighten-3">l'histoire Ã  nos
+					<h3>Les Arênes</h3>
+					<h5 class="light grey-text text-lighten-3">l'histoire à nos
 						portes</h5>
 				</div></li>
 			<li><img src="img/flamantrose.jpg" alt="Flamants Roses">
 				<div class="caption center-align">
 					<h3>Les Flamants Roses</h3>
 					<h5 class="light grey-text text-lighten-3">et la Mer
-						MÃ©diterranÃ©e</h5>
+						Méditerranée</h5>
 				</div></li>
 		</ul>
 	</div>
@@ -71,3 +71,5 @@
 </div>
 
 <jsp:include page="footer.jsp" />
+</body>
+</html>

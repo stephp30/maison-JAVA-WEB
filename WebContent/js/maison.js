@@ -89,7 +89,7 @@ $(document).ready(function () {
 
 
 $('.datepicker').pickadate({
-  dateFormat: 'dd/mm/yy',
+  format: 'd/mm/yyyy',
   labelMonthNext: 'Mois Suivant',
   labelMonthPrev: 'Mois Précédent',
   labelMonthSelect: 'Choisir le Mois',
@@ -105,6 +105,8 @@ $('.datepicker').pickadate({
   close: 'Fermer'
 
 });
+
+
 
 
 function compteCase() {

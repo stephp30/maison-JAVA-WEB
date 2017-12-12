@@ -4,6 +4,8 @@
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.Collection"%>
 
+<jsp:include page="meta.jsp" />
+<body>
 <jsp:include page="header.jsp" />
 
 <h1 class="amber-text text-darken-1">Liste des Réservations</h1>
@@ -38,26 +40,15 @@
 		<td><%=serveur.getPrenom()%></td>
 		<td><%=serveur.getTelephone()%></td>
 		<td><%=serveur.getMail()%></td>
-		<td><%=serveur.getDate()%></td>
+		<td><%=serveur.getDateTime(). getDate()%></td>
 		<td><%=serveur.getNbNuitee()%></td>
 		<td><%=serveur.getNbPersonne()%></td>
 		<td><%=serveur.getRegion()%></td>
-		<td><%=serveur.getAnimal()%></td>
-		<td><%=serveur.getParking()%></td>
-		<td><%=serveur.getFumeur()%></td>
+		<td><%=serveur.getAnimalStr()%></td>
+		<td><%=serveur.getParkingStr()%></td>
+		<td><%=serveur.getFumeurStr()%></td>
 		<td><%=serveur.getSejour()%></td>
-
-		<%-- <td>${telephone}</td>
-		<td>${mail}</td>
-		<td>${date}</td>
-		<td>${nbNuitee}</td>
-		<td>${nbPersonne}</td>
-		<td>${region}</td>
-		<td>${animal}</td>
-		<td>${parking}</td>
-		<td>${fumeur}</td>
-		<td>${sejour}</td> --%>
-
+		
 	</tr>
 	<%
 		}
@@ -69,3 +60,5 @@
 <br>
 
 <jsp:include page="footer.jsp" />
+</body>
+</html>

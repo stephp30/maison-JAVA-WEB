@@ -1,5 +1,11 @@
 package co.simplon.maison.resa;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.Locale;
 
 public class MaisonResa {
 
@@ -8,18 +14,18 @@ public class MaisonResa {
 	private String telephone;
 	private String mail;
 	private String date;
-	private String nbNuitee;	
-	private String nbPersonne;	
+	private int nbNuitee;	
+	private int nbPersonne;	
 	private String region;
-	private String animal;
-	private String parking;
-	private String fumeur;
+	private boolean animal;
+	private boolean parking;
+	private boolean fumeur;
 	private String sejour;
 	
 	
 	
-	public MaisonResa(String nom, String prenom, String telephone, String mail, String date, String nbNuitee,
-			String nbPersonne, String region, String animal, String parking, String fumeur, String sejour) {
+	public MaisonResa(String nom, String prenom, String telephone, String mail, String date, int nbNuitee,
+			int nbPersonne, String region, boolean animal, boolean parking, boolean fumeur, String sejour) {
 		super();
 		this.nom = nom;
 		this.prenom = prenom;
@@ -59,19 +65,19 @@ public class MaisonResa {
 		this.date = date;
 	}
 
-	public String getNbNuitee() {
+	public int getNbNuitee() {
 		return nbNuitee;
 	}
 
-	public void setNbNuitee(String nbNuitee) {
+	public void setNbNuitee(int nbNuitee) {
 		this.nbNuitee = nbNuitee;
 	}
 
-	public String getNbPersonne() {
+	public int getNbPersonne() {
 		return nbPersonne;
 	}
 
-	public void setNbPersonne(String nbPersonne) {
+	public void setNbPersonne(int nbPersonne) {
 		this.nbPersonne = nbPersonne;
 	}
 
@@ -83,27 +89,54 @@ public class MaisonResa {
 		this.region = region;
 	}
 
-	public String getAnimal() {
+	public boolean getAnimal() {
 		return animal;
 	}
+	
+	public String getAnimalStr() {
+		String animalStr;
+		if (this.animal == true){
+			animalStr = "oui";
+		}
+		else animalStr = "non";
+		return animalStr;
+	}
 
-	public void setAnimal(String animal) {
+	public void setAnimal(boolean animal) {
 		this.animal = animal;
 	}
 
-	public String getParking() {
+	public boolean getParking() {
 		return parking;
 	}
+	
+	public String getParkingStr() {
+		String parkingStr;
+		if (this.parking == true){
+			parkingStr = "oui";
+		}
+		else parkingStr = "non";
+		return parkingStr;
+	}
 
-	public void setParking(String parking) {
+	public void setParking(boolean parking) {
 		this.parking = parking;
 	}
 
-	public String getFumeur() {
+	public boolean getFumeur() {
 		return fumeur;
 	}
+	
+	public String getFumeurStr() {
+		String fumeurStr;
+		if (this.fumeur == true){
+			fumeurStr = "oui";
+		}
+		else fumeurStr = "non";
+		return fumeurStr;
+	}
 
-	public void setFumeur(String fumeur) {
+	public void setFumeur(boolean fumeur) {
 		this.fumeur = fumeur;
 	}
 
@@ -131,6 +164,13 @@ public class MaisonResa {
 
 	public void setNom(String nom) {
 		this.nom = nom;
+	}
+	
+	
+	public Date getDateTime() throws ParseException {
+		DateFormat format = new SimpleDateFormat("d/mm/yyyy", Locale.FRANCE);
+		Date dateTime = format.parse(this.date);
+		return dateTime;
 	}
 	
 }
