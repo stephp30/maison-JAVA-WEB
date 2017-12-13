@@ -40,7 +40,7 @@
 		<td><%=serveur.getPrenom()%></td>
 		<td><%=serveur.getTelephone()%></td>
 		<td><%=serveur.getMail()%></td>
-		<td><%=serveur.getDateTime(). getDate()%></td>
+		<td><%=serveur.getDateTime()%></td>
 		<td><%=serveur.getNbNuitee()%></td>
 		<td><%=serveur.getNbPersonne()%></td>
 		<td><%=serveur.getRegion()%></td>

@@ -1,11 +1,17 @@
 package co.simplon.maison.resa;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Scanner;
+
+import com.mysql.jdbc.Statement;
 
 public class MaisonResa {
 
@@ -172,6 +178,8 @@ public class MaisonResa {
 		Date dateTime = format.parse(this.date);
 		return dateTime;
 	}
+	
+	
 	
 }
 
