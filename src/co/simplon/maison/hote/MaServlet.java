@@ -1,10 +1,12 @@
 package co.simplon.maison.hote;
 
 import java.io.IOException;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
@@ -17,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import co.simplon.maison.resa.Jdbc;
 import co.simplon.maison.resa.ListeResa;
 import co.simplon.maison.resa.MaisonResa;
+import co.simplon.maison.resa.Outils;
 
 /**
  * Servlet implementation class MaServlet
@@ -39,7 +42,10 @@ public class MaServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.setAttribute("resa", ListeResa.getInstance().getListe());
+		//request.setAttribute("resa", ListeResa.getInstance().getListe());
+		
+		
+		
 		getServletContext().getRequestDispatcher("/listeResa.jsp").forward(request, response);
 	}
 
@@ -54,8 +60,10 @@ public class MaServlet extends HttpServlet {
 		String prenom = request.getParameter("prenom");
 		String telephone = request.getParameter("telephone");
 		String mail = request.getParameter("mail");
-		String date = request.getParameter("date");
-						
+		String dateStr = request.getParameter("date");
+		Date date = Outils.stringToDate(dateStr);
+		
+	   								
 		int nbNuitee = Integer.parseInt(request.getParameter("nbNuitee"));
 		int nbPersonne = Integer.parseInt(request.getParameter("nbPersonne"));
 		String region = request.getParameter("region");
@@ -88,14 +96,34 @@ public class MaServlet extends HttpServlet {
 		base.connection();
 		
 		try {
-			base.ecrireEnBase2(nom, prenom, telephone, mail, nbNuitee, nbPersonne, animal, parking, fumeur, region, sejour);
+			base.ecrireEnBase(nom, prenom, telephone, mail, date, nbNuitee, nbPersonne, animal, parking, fumeur, region, sejour);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
+		try {
+			base.showData();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
-		this.getServletContext().getRequestDispatcher("/validation.jsp").forward(request, response);
+		/*try {
+			base.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+				
+		try {
+			request.setAttribute("resa", base.toArray());
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		this.getServletContext().getRequestDispatcher("/listeResa.jsp").forward(request, response);
 
 	}
 

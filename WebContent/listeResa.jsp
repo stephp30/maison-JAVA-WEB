@@ -28,7 +28,7 @@
 
 	</tr>
 	<%
-		Collection<MaisonResa> liste = ListeResa.getInstance().getListe();
+		Collection<ListeResa> liste = (Collection<ListeResa>) request.getAttribute("resa");
 		if (liste != null) {
 			Iterator it = liste.iterator();
 			while (it.hasNext()) {
@@ -40,7 +40,7 @@
 		<td><%=serveur.getPrenom()%></td>
 		<td><%=serveur.getTelephone()%></td>
 		<td><%=serveur.getMail()%></td>
-		<td><%=serveur.getDateTime()%></td>
+		<td><%=serveur.getDate()%></td>
 		<td><%=serveur.getNbNuitee()%></td>
 		<td><%=serveur.getNbPersonne()%></td>
 		<td><%=serveur.getRegion()%></td>

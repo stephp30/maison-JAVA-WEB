@@ -19,7 +19,7 @@ public class MaisonResa {
 	private String prenom;
 	private String telephone;
 	private String mail;
-	private String date;
+	private Date date;
 	private int nbNuitee;	
 	private int nbPersonne;	
 	private String region;
@@ -30,7 +30,7 @@ public class MaisonResa {
 	
 	
 	
-	public MaisonResa(String nom, String prenom, String telephone, String mail, String date, int nbNuitee,
+	public MaisonResa(String nom, String prenom, String telephone, String mail, Date date, int nbNuitee,
 			int nbPersonne, String region, boolean animal, boolean parking, boolean fumeur, String sejour) {
 		super();
 		this.nom = nom;
@@ -45,6 +45,11 @@ public class MaisonResa {
 		this.parking = parking;
 		this.fumeur = fumeur;
 		this.sejour = sejour;
+	}
+	
+	public MaisonResa() {
+		super();
+		
 	}
 
 	public String getTelephone() {
@@ -63,11 +68,11 @@ public class MaisonResa {
 		this.mail = mail;
 	}
 
-	public String getDate() {
+	public Date getDate() {
 		return date;
 	}
 
-	public void setDate(String date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 
@@ -173,13 +178,7 @@ public class MaisonResa {
 	}
 	
 	
-	public Date getDateTime() throws ParseException {
-		DateFormat format = new SimpleDateFormat("d/mm/yyyy", Locale.FRANCE);
-		Date dateTime = format.parse(this.date);
-		return dateTime;
-	}
-	
-	
+		
 	
 }
 
